@@ -84,11 +84,13 @@ const Nav = () => {
               </a>
 
               {item.submenu && (
-                <div className="absolute pt-8 top-full left-0 hidden bg-white w-[800px] p-6 group-hover:flex gap-8 z-50">
+                <div className="absolute pt-8 top-full left-0 hidden  bg-white w-[800px] p-6 group-hover:flex gap-8 z-50">
                   {item.submenu.map((submenu, index) => (
                     <div key={index} className="w-1/3">
-                      <div className="bg-[#f8a41c] px-4 py-2 font-bold text-black w-full mb-2">
+                      <div className="bg-[#f8a41c] px-4 py-2 [clip-path:polygon(0_0,100%_0%,80%_90%,0_90%)] font-bold text-black w-full mb-2">
+
                         {submenu.title}
+
                       </div>
                       <ul className="text-sm text-black pl-4">
                         {submenu.items.map((subItem, index) => (

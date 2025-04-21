@@ -2,7 +2,7 @@ import React from 'react'
 
 const Herop = () => {
   return (
-    <section className="w-full h-max bg-red-900">
+    <section className="w-full h-max mt-40">
     <div className="w-full flex items-center justify-center">
       <video
         className="h-[500px] w-full object-cover"

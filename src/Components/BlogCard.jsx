@@ -1,7 +1,20 @@
 import React from 'react'
+import {useState, useEffect} from "react"
 import { ArrowRight, Calendar } from 'lucide-react'
+import { setDate } from 'date-fns';
+
+
 
 const BlogCard = () => {
+const [dateTime, setDateTime] = useState(new Date());
+
+useEffect(() => {
+  const I = setInterval(() => {
+    setDateTime(new Date());
+  }, 1000);
+
+  return () => clearInterval(I);
+}, []);
   return (
     <div className='w-80 shadow shadow-gray-500'>
         <img src="/images/dgone.svg" alt="" />
@@ -10,7 +23,7 @@ const BlogCard = () => {
             <span>
        <Calendar height={18} width={18} />
        </span>
-       <span className='text-sm text-info'>Date</span>
+       <span className='text-sm text-info'>{dateTime.toLocaleString()}</span>
             </div>
             <div className='text-info text-sm flex flex-col gap-2'>
             <h1>Distric 325 | Nepal onnounces third general convention</h1>

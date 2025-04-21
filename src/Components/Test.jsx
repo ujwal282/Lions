@@ -4,21 +4,21 @@ import "react-day-picker/dist/style.css";
 
 const Test = () => {
   const events = {
-    "2025-04-20": {
+    "2025-04-19": {
       title: "First Cabinet Meeting (Cabinet Officers Installation)",
       location: "Dhulikhel, Kavre",
       time: "12:00 pm - 1:00 pm",
     },
-    "2025-04-21": {
-        title: "Chicken party",
-        location: "new Baneshowr",
-        time: "12:00 pm - 1:00 pm",
-      },
-      "2025-04-24": {
-        title: "charity",
-        location: "new Baneshowr",
-        time: "12:00 pm - 1:00 pm",
-      }
+    // "2025-04-21": {
+    //     title: "Chicken party",
+    //     location: "new Baneshowr",
+    //     time: "12:00 pm - 1:00 pm",
+    //   },
+    //   "2025-04-24": {
+    //     title: "charity",
+    //     location: "new Baneshowr",
+    //     time: "12:00 pm - 1:00 pm",
+    //   }
   };
 
   const [selectedDate, setSelectedDate] = useState(null);
@@ -33,7 +33,8 @@ const Test = () => {
   };
 
   return (
-    <div className=" flex  items-center gap-20 justify-center bg-[#4185c1] p-4">
+    <div className=" flex flex-col  items-center gap-20 justify-center bg-[#4185c1] p-4">
+       <h1 className="text-center text-4xl">Event Calender</h1>
       <DayPicker className="bg-white p-4 rounded-xl"
         selected={selectedDate}
         onDayClick={handleDateSelect}
@@ -49,7 +50,7 @@ const Test = () => {
         <div className="bg-white rounded-xl shadow-md mt-6 p-6 w-full max-w-xl space-y-4">
           {getEventForDate(selectedDate) ? (
             <>
-            <h1 className="text-center text-4xl">Event Calender</h1>
+            {/* <h1 className="text-center text-4xl">Event Calender</h1> */}
               <div className="flex gap-4 items-center">
                 <div className="bg-yellow-400 text-black font-bold px-3 py-1 rounded">
                   Event Title
