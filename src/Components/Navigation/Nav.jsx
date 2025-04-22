@@ -72,7 +72,7 @@ const Nav = () => {
         <ul className="flex items-center justify-start gap-10 text-sm pl-2 text-gray-950">
           {navigation.map((item, index) => (
             <li key={index} className="relative group">
-              <a
+              <NavLink
                 to={item.link}
                 className={`font-bold ${
                   item.isButton
@@ -81,7 +81,7 @@ const Nav = () => {
                 }`}
               >
                 {item.label}
-              </a>
+              </NavLink>
 
               {item.submenu && (
                 <div className="absolute pt-8 top-full left-0 hidden  bg-white w-[800px] p-6 group-hover:flex gap-8 z-50">
@@ -111,4 +111,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Nav;  

@@ -5,8 +5,10 @@ import Search from '../Search/Search'
 const Clubs = () => {
   return (
     <>
+    <div className='felx flex-col items-center justify-center pt-48'>
+      
     <Search />
-     <div className='flex flex-col justify-center items-center p-10 pt-48 gap-4'>
+     <div className='flex flex-col justify-center items-center p-10  gap-4'>
         <ClubCard />
         <ClubCard />
         <ClubCard />
@@ -18,6 +20,7 @@ const Clubs = () => {
         <ClubCard />
         <ClubCard />
         <ClubCard />
+    </div>
     </div>
     </>
   )
