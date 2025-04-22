@@ -82,9 +82,9 @@ const Footer = () => {
         </div>
         <p className='text-center'>&copy; 2025. Lions International</p>
         <div className='flex gap-4 mt-2 md:mt-0 text-white text-lg'>
-          <a href="#"><Facebook size={18} /></a>
-          <a href="#"><Youtube size={18} /></a>
-          <a href="#"><Twitter size={18} /></a>
+          <NavLink to=""><Facebook size={18} /></NavLink>
+          <NavLink to=""><Youtube size={18} /></NavLink>
+          <NavLink to=""><Twitter size={18} /></NavLink>
         </div>
       <span className='uppercase text-gray-600 text-[8px] font-bold'>Design & Maintain by manish ujwal tansen & ayush </span>
       </div>

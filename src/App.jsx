@@ -14,6 +14,7 @@ import Clubs from "./Components/Club/Clubs.jsx"
 import LeoClubs from "./Components/Club/LeoClubs.jsx";
 import "./App.css";
 import Blog from "./Components/Home/Blog.jsx";
+import PageNotFound from "./Components/PageNotFound/PageNotFound.jsx";
 
 function App() {
   const router = createBrowserRouter([
@@ -36,7 +37,8 @@ function App() {
         { path: "/leoDistrict", element: <LeoDistrict /> },
         {path:  "/clubs", element: <Clubs />},
         { path: "/leoClubs", element: <LeoClubs />},
-        {path: "/blog", element: <Blog />}
+        {path: "/blog", element: <Blog />},
+        {path: "*", element: <PageNotFound />}
       ],
     },
   ]);

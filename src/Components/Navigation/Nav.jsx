@@ -1,6 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router";
-
+import { NavLink } from 'react-router';
 export const Heading = () => {
   return (
     <div className="flex items-center justify-between bg-white pt-2">
@@ -63,7 +62,7 @@ const Nav = () => {
     },
     { label: "Clubs", link: "/clubs" },
     { label: "Resources", link: "#" },
-    { label: "Login", link: "#", isButton: true },
+    { label: "Login", link: "https://lionsinternational.my.site.com/s/login/?language=en_US", isButton: true },
   ];
 
   return (
@@ -73,7 +72,7 @@ const Nav = () => {
         <ul className="flex items-center justify-start gap-10 text-sm pl-2 text-gray-950">
           {navigation.map((item, index) => (
             <li key={index} className="relative group">
-              <NavLink
+              <a
                 to={item.link}
                 className={`font-bold ${
                   item.isButton
@@ -82,7 +81,7 @@ const Nav = () => {
                 }`}
               >
                 {item.label}
-              </NavLink>
+              </a>
 
               {item.submenu && (
                 <div className="absolute pt-8 top-full left-0 hidden  bg-white w-[800px] p-6 group-hover:flex gap-8 z-50">
@@ -96,7 +95,7 @@ const Nav = () => {
                       <ul className="text-sm text-black pl-4">
                         {submenu.items.map((subItem, index) => (
                           <li key={index} className="m-2 hover:underline hover:text-info">
-                            <a href={subItem.link}>{subItem.label}</a>
+                            <NavLink to={subItem.link}>{subItem.label}</NavLink>
                           </li>
                         ))}
                       </ul>

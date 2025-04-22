@@ -33,8 +33,8 @@ const Test = () => {
   };
 
   return (
-    <div className=" flex flex-col  items-center gap-20 justify-center bg-[#4185c1] p-4">
-       <h1 className="text-center text-4xl">Event Calender</h1>
+    <div className=" flex flex-col  items-center gap-20 justify-center bg-[#4185c1] p-4 h-lvh">
+       <h1 className="text-center text-4xl text-black font-bold">Event Calender</h1>
       <DayPicker className="bg-white p-4 rounded-xl"
         selected={selectedDate}
         onDayClick={handleDateSelect}
