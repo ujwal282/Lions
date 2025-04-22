@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, Youtube, Twitter } from 'lucide-react';
+import { NavLink } from 'react-router';
 
 const Footer = () => {
   return (
@@ -34,9 +35,9 @@ const Footer = () => {
         <div className='flex flex-col gap-4'>
           <h1 className='font-semibold mb-2'>Pages</h1>
           <div className='flex flex-col gap-1'>
-            <a href="#">Home</a>
-            <a href="#">Our Team</a>
-            <a href="#">Blog</a>
+            <NavLink to="/home">Home</NavLink>
+            <NavLink to="/home">Our Team</NavLink>
+            <NavLink to="/blog">Blog</NavLink>
           </div>
         </div>
 
@@ -44,8 +45,8 @@ const Footer = () => {
         <div className='flex flex-col gap-4'>
           <h1 className='font-semibold mb-2'>Utility</h1>
           <div className='flex flex-col gap-1'>
-            <a href="#">Clubs</a>
-            <a href="#">Resources</a>
+            <NavLink to="/clubs">Clubs</NavLink>
+            <NavLink to="/resources">Resources</NavLink>
             <a href="#">Login</a>
           </div>
         </div>

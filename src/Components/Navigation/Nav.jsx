@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router";
 
 export const Heading = () => {
   return (
@@ -28,39 +29,39 @@ export const Heading = () => {
 
 const Nav = () => {
   const navigation = [
-    { label: "Home", link: "#" },
+    { label: "Home", link: "/home" },
     {
       label: "Our Team",
-      link: "#",
+      link: "/home",
       submenu: [
         {
           title: "Digi Team",
           items: [
-            { label: "Current Digi Team", link: "#" },
-            { label: "Past District Governor", link: "#" },
+            { label: "Current Digi Team", link: "/currentDigiTeam" },
+            { label: "Past District Governor", link: "/pastDigiTeam" },
           ],
         },
         {
           title: "Cabinet Officials",
           items: [
-            { label: "Senior Officials", link: "#" },
-            { label: "Cluster Head and Deputy Head", link: "#" },
-            { label: "Region Chairperson", link: "#" },
-            { label: "Zone Chairperson", link: "#" },
-            { label: "Global Causes Team", link: "#" },
-            { label: "Digi Program Team", link: "#" },
+            { label: "Senior Officials", link: "/seniorOfficials" },
+            { label: "Cluster Head and Deputy Head", link: "/clusterHead_DeputyHead" },
+            { label: "Region Chairperson", link: "/regionChairPerson" },
+            { label: "Zone Chairperson", link: "/zoneChairPerson" },
+            { label: "Global Causes Team", link: "/globalCausesTeam" },
+            { label: "Digi Program Team", link: "/digiProgramTeam" },
           ],
         },
         {
           title: "Leo District",
           items: [
-            { label: "Leo District Council", link: "#" },
-            { label: "Leo Clubs", link: "#" },
+            { label: "Leo District Council", link: "/leoDistrict" },
+            { label: "Leo Clubs", link: "/leoDistrict" },
           ],
         },
       ],
     },
-    { label: "Clubs", link: "#" },
+    { label: "Clubs", link: "/clubs" },
     { label: "Resources", link: "#" },
     { label: "Login", link: "#", isButton: true },
   ];
@@ -72,8 +73,8 @@ const Nav = () => {
         <ul className="flex items-center justify-start gap-10 text-sm pl-2 text-gray-950">
           {navigation.map((item, index) => (
             <li key={index} className="relative group">
-              <a
-                href={item.link}
+              <NavLink
+                to={item.link}
                 className={`font-bold ${
                   item.isButton
                     ? "bg-yellow-400 pt-1.5 pb-1.5 pr-4 pl-4 rounded-full"
@@ -81,7 +82,7 @@ const Nav = () => {
                 }`}
               >
                 {item.label}
-              </a>
+              </NavLink>
 
               {item.submenu && (
                 <div className="absolute pt-8 top-full left-0 hidden  bg-white w-[800px] p-6 group-hover:flex gap-8 z-50">
