@@ -13,7 +13,7 @@ const PageNotFound = () => {
         The page you’re looking for doesn’t exist or was moved.
       </p>
       <NavLink
-        to="/home"
+        to="/"
         className="px-6 py-3 bg-blue-600 text-white rounded-2xl shadow hover:bg-blue-700 transition-all duration-300"
       >
         Go back Home

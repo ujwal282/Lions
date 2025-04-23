@@ -10,11 +10,12 @@ import ZoneChairPerson from "./Components/DigiTeam/ZoneChairPerson.jsx";
 import GlobalCausesTeam from "./Components/DigiTeam/GlobalCausesTeam.jsx";
 import DigiProgramTeam from "./Components/DigiTeam/DigiProgramTeam.jsx";
 import LeoDistrict from "./Components/DigiTeam/LeoDistrict.jsx";
-import Clubs from "./Components/Club/Clubs.jsx"
+import Clubs from "./Components/Club/Clubs.jsx";
 import LeoClubs from "./Components/Club/LeoClubs.jsx";
-import "./App.css";
+import Resources from "./Components/Resources/Resources.jsx";
 import Blog from "./Components/Home/Blog.jsx";
 import PageNotFound from "./Components/PageNotFound/PageNotFound.jsx";
+import "./App.css";
 
 function App() {
   const router = createBrowserRouter([
@@ -22,7 +23,7 @@ function App() {
       path: "/",
       element: <AppLayout />,
       children: [
-        { path: "/home", element: <Home /> },
+        { path: "/", element: <Home /> },
         { path: "/currentDigiTeam", element: <CurrentDigiTeam /> },
         { path: "/pastDigiTeam", element: <PastDigiTeam /> },
         { path: "/seniorOfficials", element: <SeniorOfficials /> },
@@ -35,10 +36,11 @@ function App() {
         { path: "/globalCausesTeam", element: <GlobalCausesTeam /> },
         { path: "/digiProgramTeam", element: <DigiProgramTeam /> },
         { path: "/leoDistrict", element: <LeoDistrict /> },
-        {path:  "/clubs", element: <Clubs />},
-        { path: "/leoClubs", element: <LeoClubs />},
-        {path: "/blog", element: <Blog />},
-        {path: "*", element: <PageNotFound />}
+        { path: "/clubs", element: <Clubs /> },
+        { path: "/leoClubs", element: <LeoClubs /> },
+        {path: "/resources", element: <Resources />},
+        { path: "/blog", element: <Blog /> },
+        { path: "*", element: <PageNotFound /> },
       ],
     },
   ]);

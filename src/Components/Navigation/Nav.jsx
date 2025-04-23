@@ -28,10 +28,10 @@ export const Heading = () => {
 
 const Nav = () => {
   const navigation = [
-    { label: "Home", link: "/home" },
+    { label: "Home", link: "/" },
     {
       label: "Our Team",
-      link: "/home",
+      link: "/currentDigiTeam",
       submenu: [
         {
           title: "Digi Team",
@@ -55,13 +55,13 @@ const Nav = () => {
           title: "Leo District",
           items: [
             { label: "Leo District Council", link: "/leoDistrict" },
-            { label: "Leo Clubs", link: "/leoDistrict" },
+            { label: "Leo Clubs", link: "/leoClubs" },
           ],
         },
       ],
     },
     { label: "Clubs", link: "/clubs" },
-    { label: "Resources", link: "#" },
+    { label: "Resources", link: "/resources" },
     { label: "Login", link: "https://lionsinternational.my.site.com/s/login/?language=en_US", isButton: true },
   ];
 

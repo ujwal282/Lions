@@ -88,9 +88,9 @@ const ProfileCard = () => {
        <>
        {
         members.map(({name, position, contact, email, memberNumber, address}) => (
-            <div className="w-72 shadow shadow-gray-500">
+            <div key={Math.random() * 100 + 1} className="w-72 shadow shadow-gray-500">
             <div className="w-full flex justify-center items-center bg-primary">
-            <img src="/logo/logo.svg" className="w-full" alt="" />
+            <img src="images/dgone.svg" className="w-full" alt="Digi Members" />
             </div>
             <div className="flex flex-col items-center justify-center p-4">
               <div className="text-info text-sm flex flex-col justify-center items-center gap-2">
