@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from 'react-router';
+import { Menu, X } from 'lucide-react';
 export const Heading = () => {
   return (
-    <div className="flex items-center justify-between bg-white pt-2">
+    <div className="flex items-center  justify-between bg-white pt-2">
       <div className="flex items-center justify-center p-2 pl-4">
         <div className="w-max">
           <img className="w-20" src="/logo/logo.svg" alt="organization logo" />
@@ -27,6 +28,12 @@ export const Heading = () => {
 };
 
 const Nav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleOpen = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen])
   const navigation = [
     { label: "Home", link: "/" },
     {
@@ -69,7 +76,7 @@ const Nav = () => {
     <header className="w-full fixed top-0 left-0 z-[900] bg-white">
       <Heading />
       <nav className="bg-blue-200 p-6">
-        <ul className="flex items-center justify-start gap-10 text-sm pl-2 text-gray-950">
+        <ul className="hidden xl:flex md:flex items-center justify-start gap-10 text-sm pl-2 text-gray-950">
           {navigation.map((item, index) => (
             <li key={index} className="relative group">
               <NavLink
@@ -106,7 +113,15 @@ const Nav = () => {
             </li>
           ))}
         </ul>
+        <button
+      className="xl:hidden md:hidden"
+      onClick={handleOpen}>
+        {!isOpen && (
+          <Menu />
+        )}
+      </button>
       </nav>
+
     </header>
   );
 };

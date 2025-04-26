@@ -22,6 +22,12 @@
   @apply absolute top-full left-0 mt-2 w-max bg-white text-black rounded-md shadow-md opacity-0 invisible group-hover:opacity-100  group-hover:visible transition duration-500 z-50;
 }
 
-body{
+/* body{
   font-family: 'Open Sans', sans-serif;
+  
+} */
+
+body {
+  font-family: Helvetica, sans-serif;
 }
+
