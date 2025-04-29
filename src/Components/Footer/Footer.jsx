@@ -3,6 +3,7 @@ import { Facebook, Youtube, Twitter } from 'lucide-react';
 import { NavLink } from 'react-router';
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
     <footer className='bg-footer p-8 pb-2'>
       <div className='text-white flex flex-col md:flex-row items-start justify-between gap-8'>
@@ -80,7 +81,7 @@ const Footer = () => {
           <a href="#" className='hover:underline'>Privacy Policy</a>
           <a href="#" className='hover:underline'>Terms of Service</a>
         </div>
-        <p className='text-center'>&copy; 2025. Lions International</p>
+        <p className='text-center'>&copy; {year}. Lions International</p>
         <div className='flex gap-4 mt-2 md:mt-0 text-white text-lg'>
           <NavLink to=""><Facebook size={18} /></NavLink>
           <NavLink to=""><Youtube size={18} /></NavLink>

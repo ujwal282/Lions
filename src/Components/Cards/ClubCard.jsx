@@ -1,8 +1,9 @@
 import React from 'react'
 const ClubCard = () => {
   return (
-     <div className='flex items-center justify-between bg-white p-4 rounded-md shadow shadow-gray-600 w-3xl '>
-        <div className='flex items-center gap-4'>
+     <div 
+     className='flex items-center justify-center gap-3 xl:justify-between bg-white p-4 rounded-md shadow shadow-gray-600 xl:w-3xl '>
+        <div className='flex  items-center gap-4'>
           <img src="/images/logo.svg" alt="logo" className="w-20 h-20 object-contain" />
           <div>
             <h1 className='text-base font-semibold text-gray-800'>Gautam Buddha</h1>
