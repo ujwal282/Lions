@@ -37,7 +37,7 @@ const Test = () => {
       <h1 className="text-center text-4xl text-black font-bold">
         Event Calender
       </h1>
-      <div className=" flex   items-center gap-20 justify-center bg-[#4185c1] p-4">
+      <div className=" flex items-center flex-col xl:flex-row gap-20 justify-center bg-[#4185c1] p-4">
         <DayPicker
           className="bg-white p-4 rounded-xl [&_.rdp-day]:font-bold [&_.rdp-day]:tracking-wide"
           selected={selectedDate}

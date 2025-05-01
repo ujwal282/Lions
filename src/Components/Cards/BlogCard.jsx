@@ -1,7 +1,8 @@
 import React from 'react'
 import {useState, useEffect} from "react"
 import { ArrowRight, Calendar } from 'lucide-react'
-import { setDate } from 'date-fns';
+import { motion } from 'framer-motion'
+// import { setDate } from 'date-fns';
 
 
 
@@ -16,7 +17,12 @@ useEffect(() => {
   return () => clearInterval(I);
 }, []);
   return (
-    <div className='w-80 shadow shadow-gray-500'>
+    <motion.div className='w-80 shadow shadow-gray-500'
+    initial={{ x: -100, opacity: 0 }}
+    whileInView={{ x: 0, opacity: 1 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    viewport={{ once: false }}
+>
         <img src="/images/dgone.svg" alt="" />
         <div className='flex flex-col items-start justify-center pl-2'>
             <div className='flex items-center justify-center gap-2 pt-2 pb-2'>
@@ -31,7 +37,7 @@ useEffect(() => {
             <a className='flex justify-start items-center gap-1 p-2' href="#">See all <ArrowRight /></a>
             </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
 

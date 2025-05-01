@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 const ProfileCard = () => {
     const members = [
   {
@@ -88,7 +88,12 @@ const ProfileCard = () => {
        <>
        {
         members.map(({name, position, contact, email, memberNumber, address}) => (
-            <div key={Math.random() * 100 + 1} className="w-72 shadow shadow-gray-500">
+            <motion.div key={Math.random() * 100 + 1} className="w-72 shadow shadow-gray-500"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: false }}
+>
             <div className="w-full flex justify-center items-center bg-primary">
             <img src="images/dgone.svg" className="w-full" alt="Digi Members" />
             </div>
@@ -104,7 +109,7 @@ const ProfileCard = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))
        }
        </>

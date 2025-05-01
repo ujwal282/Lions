@@ -16,6 +16,7 @@ import Resources from "./Components/Resources/Resources.jsx";
 import Blog from "./Components/Home/Blog.jsx";
 import PageNotFound from "./Components/PageNotFound/PageNotFound.jsx";
 import "./App.css";
+import LioAi from "./LionAi/LioAi.jsx";
 
 function App() {
   const router = createBrowserRouter([
@@ -40,7 +41,9 @@ function App() {
         { path: "/leoClubs", element: <LeoClubs /> },
         {path: "/resources", element: <Resources />},
         { path: "/blog", element: <Blog /> },
+        {path: "/lio_ai", element: <LioAi />},
         { path: "*", element: <PageNotFound /> },
+        
       ],
     },
   ]);

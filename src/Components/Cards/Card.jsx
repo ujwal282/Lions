@@ -1,11 +1,15 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 const Card = () => {
   return (
-    <div className="flex p-10 bg-white flex-col gap-10 items-center">
+    <div className="flex p-10 bg-white flex-col gap-10 items-center overflow-hidden">
       
      
-      <div className="w-full max-w-6xl p-4 flex flex-col md:flex-row items-center gap-6 shadow shadow-gray-400 rounded-md">
+      <motion.div className="w-full max-w-6xl p-4 flex flex-col md:flex-row items-center gap-6 shadow shadow-gray-400 rounded-md" 
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: false }}>
        
         <div className="w-full md:w-[45%] [clip-path:polygon(0_0,100%_0,85%_100%,0%_100%)]">
           <img src="/images/dgone.svg" alt="District Governor" className="w-full h-auto object-cover" />
@@ -30,10 +34,14 @@ const Card = () => {
             Learn More
           </a>
         </div>
-      </div>
+      </motion.div>
 
    
-      <div className="w-full max-w-6xl p-4 flex flex-col md:flex-row-reverse items-center gap-6 shadow shadow-gray-400 rounded-md">
+      <motion.div  className="w-full max-w-6xl p-4 flex flex-col md:flex-row-reverse items-center gap-6 shadow shadow-gray-400 rounded-md"
+      initial={{ x: 300, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: false }}>
        
         <div className="w-full md:w-[45%] [clip-path:polygon(0_0,100%_0,100%_100%,44%_100%)]">
           <img src="/images/dgone.svg" alt="District Governor" className="w-full h-auto object-cover" />
@@ -58,7 +66,7 @@ const Card = () => {
             Learn More
           </a>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

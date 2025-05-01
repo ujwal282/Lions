@@ -9,11 +9,6 @@ const Blog = () => {
     </div>
      <section className="flex items-center justify-around flex-wrap gap-8 p-10">
       <BlogCard />
-      <BlogCard />
-      <BlogCard />
-      <BlogCard />
-      <BlogCard />
-
     </section>
    </div>
   );
