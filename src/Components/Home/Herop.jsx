@@ -1,7 +1,7 @@
 import React from 'react'
 const Herop = () => {
   return (
-    <section className="w-full h-lvh mt-32">
+    <section className="w-full h-max xl:h-lvh mt-32">
     <div className="w-full flex items-center justify-center">
       <video
         className="h-[600px] w-full object-cover"
