@@ -56,7 +56,7 @@ const Test = () => {
         />
        <div>
        {
-        (!selectedDate) ?  <img src="/logo/Quote.svg" alt="" srcset="" /> : ""
+        (!selectedDate) ?  <img src="/logo/Quote.svg" alt="calender solgan" /> : ""
        }
         {selectedDate && (
           <div className="bg-white rounded-xl shadow-md mt-6 p-6 w-full max-w-xl space-y-4">
