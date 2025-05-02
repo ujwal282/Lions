@@ -33,7 +33,8 @@ const Test = () => {
   };
 
   return (
-    <div className="bg-[#4185c1] p-4 h-lvh">
+    <div className="bg-[#4185c1] p-4 h-max xl:h-lvh">
+      
       <h1 className="text-center text-4xl text-black font-bold">
         Event Calender
       </h1>
@@ -53,13 +54,17 @@ const Test = () => {
             },
           }}
         />
-
+       <div>
+       {
+        (!selectedDate) ?  <img src="/logo/Quote.svg" alt="" srcset="" /> : ""
+       }
         {selectedDate && (
           <div className="bg-white rounded-xl shadow-md mt-6 p-6 w-full max-w-xl space-y-4">
             {getEventForDate(selectedDate) ? (
               <>
                 {/* <h1 className="text-center text-4xl">Event Calender</h1> */}
                 <div className="flex gap-4 items-center">
+                  
                   <div className="bg-yellow-400 text-black font-bold px-3 py-1 rounded">
                     Event Title
                   </div>
@@ -85,14 +90,17 @@ const Test = () => {
                     {getEventForDate(selectedDate).time}
                   </div>
                 </div>
+                
               </>
             ) : (
               <h4 className="text-red-500 text-center font-semibold">
                 No Event on this Date
               </h4>
+            
             )}
           </div>
         )}
+       </div>
       </div>
     </div>
   );

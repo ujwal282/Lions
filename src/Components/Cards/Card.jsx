@@ -11,7 +11,7 @@ const Card = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: false }}>
        
-        <div className="w-full md:w-[45%] [clip-path:polygon(0_0,100%_0,85%_100%,0%_100%)]">
+        <div className="w-full md:w-[45%] xl:[clip-path:polygon(0_0,100%_0,85%_100%,0%_100%)]">
           <img src="/images/dgone.svg" alt="District Governor" className="w-full h-auto object-cover" />
         </div>
 
@@ -43,7 +43,7 @@ const Card = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: false }}>
        
-        <div className="w-full md:w-[45%] [clip-path:polygon(0_0,100%_0,100%_100%,44%_100%)]">
+        <div className="w-full md:w-[45%] xl:[clip-path:polygon(0_0,100%_0,100%_100%,44%_100%)]">
           <img src="/images/dgone.svg" alt="District Governor" className="w-full h-auto object-cover" />
         </div>
 
