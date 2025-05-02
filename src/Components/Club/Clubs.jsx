@@ -44,7 +44,7 @@ const Clubs = () => {
   return (
     <div className='flex flex-col items-center justify-center pt-48'>
       <Search onSearch={setQuery} query={query} />
-      <div className='flex flex-col justify-center items-center p-10 gap-4'>
+      <div className='flex flex-col justify-center items-center  xl:p-10 gap-4'>
         <ClubCard clubs={query === "" ? allClubs : filteredClubs} />
       </div>
     </div>

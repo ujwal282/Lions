@@ -18,7 +18,7 @@ const Resources = () => {
       },
   ];
   return (
-    <section className="flex justify-center items-center flex-col p-10 pt-52">
+    <section className="flex justify-center items-center flex-col sm:p-10 pt-52">
       <h1 className="text-4xl text-heading mb-3">Leo District Council</h1>
       <div className="overflow-x-auto w-full">
         <table className="min-w-full border-collapse border border-gray-400">
