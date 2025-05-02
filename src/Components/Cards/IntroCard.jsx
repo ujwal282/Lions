@@ -2,7 +2,7 @@ import React from "react";
 
 const IntroCard = ({ title }) => {
   return (
-    <div className="w-full h-max xl:h-lvh flex items-center justify-center p-4 bg-[url('/images/walpaper.svg')] bg-no-repeat bg-cover bg-center">
+    <div className="w-full h-max xl:h-lvh flex items-center justify-center p:0 sm:p-4 bg-[url('/images/walpaper.svg')] bg-no-repeat bg-cover bg-center">
       <div className="mx-4 flex flex-col items-center justify-center gap-4 xl:gap-20 ">
       <div className="flex flex-col items-center justify-center">
     <h1 className="border-b-amber-300 border-b-2 text-2xl font-bold w-max">

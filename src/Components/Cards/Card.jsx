@@ -2,10 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 const Card = () => {
   return (
-    <div className="flex p-10 bg-white flex-col gap-10 items-center overflow-hidden">
+    <div className="flex sm:p-10 bg-white flex-col gap-10 items-center overflow-hidden">
       
      
-      <motion.div className="w-full max-w-6xl p-4 flex flex-col md:flex-row items-center gap-6 shadow shadow-gray-400 rounded-md" 
+      <motion.div className="w-full max-w-6xl p-4  flex flex-col md:flex-row items-center gap-6 shadow shadow-gray-400 rounded-md" 
       initial={{ x: -100, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -37,7 +37,7 @@ const Card = () => {
       </motion.div>
 
    
-      <motion.div  className="w-full max-w-6xl p-4 flex flex-col md:flex-row-reverse items-center gap-6 shadow shadow-gray-400 rounded-md"
+      <motion.div  className="w-full max-w-6xl p-4  flex flex-col md:flex-row-reverse items-center gap-6 shadow shadow-gray-400 rounded-md"
       initial={{ x: 300, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
