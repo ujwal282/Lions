@@ -9,14 +9,14 @@ import Test from "../Calender/Test"
 
 const Home = () => {
   return (
-   <>
+   <section className='flex flex-col items-center justify-center gap-4'>
      <Herop />
      <IntroCard />
      <Card />
      <Test />
      <Blog />
     
-   </>
+   </section>
   )
 }
 

@@ -4,11 +4,11 @@ import { NavLink } from 'react-router';
 
 const Footer = () => {
   return (
-    <footer className='bg-footer p-8 pb-2'>
+    <footer className='bg-footer p-2.5 sm:p-8 pb-2'>
       <div className='text-white flex flex-col md:flex-row items-start justify-between gap-8'>
 
         {/* Company Logo + Info */}
-        <div className='w-80 flex flex-col gap-4 items-start justify-center'>
+        <div className=' w-full sm:w-80 flex flex-col gap-4 items-start justify-center'>
           {/* Company Logo and Heading */}
           <div className="flex items-center justify-center">
             <div className="flex items-center justify-center gap-4">

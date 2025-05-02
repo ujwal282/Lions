@@ -5,7 +5,7 @@ const Search = ({ onSearch, query }) => {
   return (
     <div className='flex items-center justify-center w-full mb-4'>
       <input
-        className='shadow shadow-gray-500 rounded-l-md p-2 outline-0 focus:ring-1 focus:ring-primary transition-all w-64 sm-72 md:w-xl xl:w-3xl'
+        className='shadow shadow-gray-500 rounded-l-md p-2 outline-0 focus:ring-1 focus:ring-primary transition-all w-72  md:w-xl xl:w-3xl'
         type="text"
         onChange={(e) => onSearch(e.target.value)}
         value={query}
