@@ -88,7 +88,7 @@ const ProfileCard = () => {
        <>
        {
         members.map(({name, position, contact, email, memberNumber, address}) => (
-            <motion.div key={Math.random() * 100 + 1} className="w-72 shadow shadow-gray-500"
+            <motion.div key={Math.random() * 100 + 1} className="sm:w-72 w-[90%] shadow shadow-gray-500"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
