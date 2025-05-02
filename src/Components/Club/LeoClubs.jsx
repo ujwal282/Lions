@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const LeoClubs = () => {
+  const {t} = useTranslation();
   const clubs = [
     { id: 1, name: "MidClub", charterDate: "2024-09-18", clubId: 19399, memberCount: 9000, dues: "None" },
     { id: 2, name: "NorthStars", charterDate: "2022-06-12", clubId: 18221, memberCount: 7400, dues: "Paid" },
@@ -27,7 +29,7 @@ const LeoClubs = () => {
 
   return (
     <section className="flex justify-center items-center flex-col p-2 sm:p-10 pt-52">
-      <h1 className="text-4xl text-heading mb-3">Leo District Council</h1>
+      <h1 className="text-4xl text-heading mb-3">{t("header.teams.leo-district.club")}</h1>
       <div className="overflow-x-auto w-full">
         <table className="min-w-full border-collapse border border-gray-400">
           <thead>

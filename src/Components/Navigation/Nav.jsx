@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router";
 import { Menu, X, Plus, Minus } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export const Heading = () => {
+  const {t, i18n } = useTranslation();
   return (
     <div className="flex items-center justify-between bg-header pr-2">
       <div className="flex items-center justify-center p-1 md:pl-4">
@@ -30,11 +32,17 @@ export const Heading = () => {
           />
         </NavLink>
         <select
+        onChange={(e) =>{
+          i18n.changeLanguage(e.target.value)
+          localStorage.setItem("language",e.target.value)
+       }
+         }
+         value={i18n.language}
           name="language"
           className="shadow-md text-xs sm:pl-4 sm:pr-4 pt-2 pb-2 rounded-full outline-1 outline-white text-white"
         >
-          <option value="english">English</option>
-          <option value="nepali">Nepali</option>
+          <option value="en">English</option>
+          <option value="ne">Nepali</option>
         </select>
       </div>
     </div>
@@ -42,6 +50,7 @@ export const Heading = () => {
 };
 
 const Nav = () => {
+ const {t} = useTranslation()
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenus, setActiveSubmenus] = useState({});
 
@@ -58,50 +67,43 @@ const Nav = () => {
   }, [isOpen]);
 
   const navigation = [
-    { label: "Home", link: "/" },
+    { label:t("header.home"), link: "/" },
     {
-      label: "Our Team",
+      label:  t("header.teams.title"),
       link: "/currentDigiTeam",
       submenu: [
         {
-          title: "Digi Team",
+          title:  t("header.teams.digi-team.heading"),
           items: [
-            { label: "Current Digi Team", link: "/currentDigiTeam" },
-            { label: "Past District Governor", link: "/pastDigiTeam" },
+            { label: t("header.teams.digi-team.current"), link: "/currentDigiTeam" },
+            { label: t("header.teams.digi-team.past-governer"), link: "/pastDigiTeam" },
           ],
         },
         {
-          title: "Cabinet Officials",
+          title:t("header.teams.cabinet-officials.heading"),
           items: [
-            { label: "Senior Officials", link: "/seniorOfficials" },
-            {
-              label: "Cluster Head and Deputy Head",
-              link: "/clusterHead_DeputyHead",
-            },
-            { label: "Region Chairperson", link: "/regionChairPerson" },
-            { label: "Zone Chairperson", link: "/zoneChairPerson" },
-            { label: "Global Causes Team", link: "/globalCausesTeam" },
-            { label: "Digi Program Team", link: "/digiProgramTeam" },
+            { label:t("header.teams.cabinet-officials.senior"), link: "/seniorOfficials" },
+            { label:  t("header.teams.cabinet-officials.cluster-head"), link: "/clusterHead_DeputyHead" },
+            { label: t("header.teams.cabinet-officials.region"), link: "/regionChairPerson" },
+            { label: t("header.teams.cabinet-officials.zone"), link: "/zoneChairPerson" },
+            { label:  t("header.teams.cabinet-officials.global"), link: "/globalCausesTeam" },
+            { label: t("header.teams.cabinet-officials.digi-program"), link: "/digiProgramTeam" },
           ],
         },
         {
-          title: "Leo District",
+          title:  t("header.teams.leo-district.heading"),
           items: [
-            { label: "Leo District Council", link: "/leoDistrict" },
-            { label: "Leo Clubs", link: "/leoClubs" },
+            { label: t("header.teams.leo-district.council"), link: "/leoDistrict" },
+            { label:  t("header.teams.leo-district.club"), link: "/leoClubs" },
           ],
         },
       ],
     },
-    { label: "Clubs", link: "/clubs" },
-    { label: "Resources", link: "/resources" },
-    {
-      label: "Login",
-      link: "https://lionsinternational.my.site.com/s/login/?language=en_US",
-      isButton: true,
-      target: "_blank",
-    },
+    { label: t("header.clubs"), link: "/clubs" },
+    { label: t("header.resources"), link: "/resources" },
+    { label: t("header.login"), link: "https://lionsinternational.my.site.com/s/login/?language=en_US", isButton: true , target:"_blank"},
   ];
+
 
   return (
     <header className="w-full fixed top-0 left-0 z-[900] bg-white">
