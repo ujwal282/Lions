@@ -15,8 +15,15 @@ import LeoClubs from "./Components/Club/LeoClubs.jsx";
 import Resources from "./Components/Resources/Resources.jsx";
 import Blog from "./Components/Home/Blog.jsx";
 import PageNotFound from "./Components/PageNotFound/PageNotFound.jsx";
-import "./App.css";
 import LioAi from "./LionAi/LioAi.jsx";
+import "./App.css";
+import Aside from "./Admin/Navigation/Aside.jsx"
+import LineChart from "./Admin/Linechart.jsx";
+import Chart from "./Admin/Chart.jsx";
+import DetailCard from "./Admin/Navigation/DetailCard.jsx";
+import Donation from "./Admin/Donation.jsx";
+import Management from "./Admin/Navigation/Management.jsx";
+
 
 function App() {
   const router = createBrowserRouter([
@@ -49,6 +56,32 @@ function App() {
   ]);
 
   return <RouterProvider router={router} />;
+  // return(
+  //   <>
+  //   <Aside />
+  //   <div>
+  //   <div>
+        
+  //   <DetailCard member={"1,230"} profit={"+12% from last month"} />
+  //   <DetailCard member={"1,230"} profit={"+12% from last month"} />
+  //   <DetailCard member={"1,230"} profit={"+12% from last month"} />
+  //   <DetailCard member={"1,230"} profit={"+12% from last month"} />
+  //   <DetailCard member={"1,230"} profit={"+12% from last month"} />
+  //   </div>
+  //  <div>
+  //  <div>
+  //  <Chart />
+  //  <div>
+  //   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam architecto voluptatum sed totam! Quo, reprehenderit amet. Rem accusantium possimus minus.</p>
+  //  </div>
+  //  </div>
+  //  <LineChart />
+  //  </div>
+  //   <Donation />
+  //   {/* <Management /> */}
+  //   </div>
+  //   </>
+  
 }
 
 export default App;

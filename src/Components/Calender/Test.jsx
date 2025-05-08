@@ -33,7 +33,7 @@ const Test = () => {
   };
 
   return (
-    <div className="bg-[#4185c1] sm:p-4 h-max xl:h-lvh">
+    <div className="bg-[#4185c1] sm:p-4: w-full xl:h-lvh">
       
       <h1 className="text-center text-4xl text-black font-bold">
         Event Calender
